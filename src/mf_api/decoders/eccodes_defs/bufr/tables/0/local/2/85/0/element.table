@@ -1,0 +1,57 @@
+001192|Tabledescomposites|long|Table des composites|Code table|0|0|8|Code table|0|2
+001193|Tabledesidentificateursdesdonneescombinees|long|Table des identificateurs des donnees combinees|Code table|0|0|8|Code table|0|2
+002192|Typederadar|long|Type de radar|Code table|0|0|8|Code table|0|2
+002193|Typedecalculateur|long|Type de calculateur|Code table|0|0|8|Code table|0|2
+002194|Indicateurdudernieretalonnage|long|Indicateur du dernier etalonnage|Code table|0|0|8|Code table|0|2
+002195|Frequencedudernieretalonnage|long|Frequence du dernier etalonnage|Hz|-6|0|16|Numeric|0|2
+002196|Reglagebasdudernieretalonnage|long|Reglage bas du dernier etalonnage|Numeric|0|0|16|Numeric|0|2
+002197|Reglagehautdudernieretalonnage|long|Reglage haut du dernier etalonnage|Numeric|0|0|16|Numeric|0|2
+002198|Indicateurdarretoudepanne|long|Indicateur d arret ou de panne|Code table|0|0|8|Code table|0|2
+002199|Constanteradar|long|Constante radar|dB|1|-1000|16|Numeric|0|2
+002200|Indicateurdefonctionnementdeleliminateurechosfixes|long|Indicateur de fonctionnement de l eliminateur echos fixes|Code table|0|0|2|Code table|0|2
+002201|Indicateurdepositionnementensiteinhibe|long|Indicateur de positionnement en site inhibe|Code table|0|0|2|Code table|0|2
+002202|Sensdebalayageenazimut|long|Sens de balayage en azimut|Code table|0|0|2|Code table|0|2
+005192|Distancew-educoinnwdelimageauradar|long|Distance w-e du coin nw de l image au radar|m|0|-1024000|24|Numeric|0|2
+005193|Distancew-esurleplandeprojectionducoinnwdel'image|long|Distance w-e sur le plan de projection du coin nw de l'image|m|0|-1024000|24|Numeric|0|2
+005194|Indicateurducentredeprojection|long|Indicateur du centre de projection|Code Table|0|0|8|Code table|0|2
+005195|Latitudedereference|long|Latitude de reference|degre|5|-9000000|25|Numeric|0|2
+005196|TaillesousimageW-E|long|Taille sous image W-E|m|0|0|16|Numeric|0|2
+005232|Direction(spectral)|long|Direction (spectral)|Degree|0|0|12|Numeric|0|2
+006192|Distancen-sducoinnwdelimageauradar|long|Distance n-s du coin nw de l image au radar|m|0|-1024000|24|Numeric|0|2
+006193|Distancedapplicationdelacorrectionen1/r2|long|Distance d application de la correction en 1/r2|m|-3|0|16|Numeric|0|2
+006194|Porteededebutdetraitementdunsite|long|Portee de debut de traitement d un site|m|-3|0|16|Numeric|0|2
+006195|Porteedefindetraitementdunsite|long|Portee de fin de traitement d un site|m|-3|0|16|Numeric|0|2
+006196|Distanceobliquemaximald'utilisationdesdonnees|long|Distance oblique maximal d'utilisation des donnees|m|-3|0|16|Numeric|0|2
+006197|DistanceNSsurleplandeprojectionducoinNWdel'image|long|Distance NS sur le plan de projection du coin NW de l'image|m|0|-1024000|24|Numeric|0|2
+006198|Longitudedumeridienparalleleal'axedesY|long|Longitude du meridien parallele a l'axe des Y|degre|5|-18000000|26|Numeric|0|2
+006199|Porteehydrologique|long|Portee hydrologique|m|-3|0|10|Numeric|0|2
+021192|Reflectiviteminimalepourlavaleurdupixel|long|Reflectivite minimale pour la valeur du pixel|dB|1|0|16|Numeric|0|2
+021193|Reflectivitemaximalepourlavaleurdupixel|long|Reflectivite maximale pour la valeur du pixel|dB|1|0|16|Numeric|0|2
+021194|Reflectivitetheorique|long|Reflectivite theorique|dBZ|1|0|16|Numeric|0|2
+021195|Reflectivitemesuree|long|Reflectivite mesuree|dBZ|1|0|16|Numeric|0|2
+025009|Calibrationmethod(Modifiee!!)|long|Calibration method (Modifiee!!)|Flag table|0|0|5|Code table|0|2
+025192|Methodedecompositiondansleszonesderecouvrement|long|Methode de composition dans les zones de recouvrement|Code table|0|0|8|Code table|0|2
+025193|Numerodeversionlogicielleducalculateur|long|Numero de version logicielle du calculateur|Numeric|2|0|16|Numeric|0|2
+025194|Numerodeversiondecomposite|long|Numero de version de composite|Numeric|2|0|16|Numeric|0|2
+025195|Numerodeversiondecarteutiliseepourcomposition|long|Numero de version de carte utilisee pour composition|Numeric|0|0|8|Numeric|0|2
+025196|Methodedecumul|long|Methode de cumul|Code table|0|0|8|Code table|0|2
+025197|Nombred'imagesprisesencompte|long|Nombre d'images prises en compte|Numeric|0|0|24|Numeric|0|2
+025210|Facteurdecorrectionglobal|long|Facteur de correction global|Numeric|2|0|10|Numeric|0|2
+029002|Co-ordinategridtype|long|Co-ordinate grid type|Code table|0|0|2|Code table|0|2
+030192|Modedebalayage|long|Mode de balayage|Code table|0|0|8|Code table|0|2
+031192|Facteursuperelargiderepetitiondifferedudescripteur|long|Facteur super elargi de repetition differe du descripteur|Numeric|0|0|32|Numeric|0|2
+048192|Bitdecalage|long|Bit de calage|Numeric|0|0|1|Numeric|0|2
+049192|Cqintegritedumessage|long|Cq integrite du message|Code table|0|0|4|Code table|0|2
+049193|Cqarretpanne|long|Cq arret panne|Code table|0|0|4|Code table|0|2
+049194|Cqetalonnage|long|Cq etalonnage|Code table|0|0|4|Code table|0|2
+049195|Cqeliminateurechosfixes|long|Cq eliminateur echos fixes|Code table|0|0|4|Code table|0|2
+049196|Cqcontroletemporel|long|Cq controle temporel|Code table|0|0|4|Code table|0|2
+049197|Cqcontrolespatial|long|Cq controle spatial|Code table|0|0|4|Code table|0|2
+049198|Cqcontroledecoherenceechosfixes|long|Cq controle de coherence echos fixes|Code table|0|0|4|Code table|0|2
+049199|Cqcomparaisonaveclesdonneessatellitaires|long|Cq comparaison avec les donnees satellitaires|Code table|0|0|4|Code table|0|2
+049211|Cptqimagesemisesparlecalculateurradar|long|Cptq images emises par le calculateur radar|Code table|0|0|16|Code table|0|2
+049212|Cptqimagesrecuesparleconcentrateur|long|Cptq images recues par le concentrateur|Code table|0|0|16|Code table|0|2
+049213|Cptqimagesemisesparleconcentrateurradar|long|Cptq images emises par le concentrateur radar|Code table|0|0|16|Code table|0|2
+049214|Cptqimagesrecuesparlesystemedediffusion|long|Cptq images recues par le systeme de diffusion|Code table|0|0|16|Code table|0|2
+049215|Cptqimagesemisesparlesystemedediffusion|long|Cptq images emises par le systeme de diffusion|Code table|0|0|16|Code table|0|2
+049216|Cptqimagesrecuesparlamachined'archivage|long|Cptq images recues par la machine d'archivage|Code table|0|0|16|Code table|0|2
