@@ -20,7 +20,7 @@ class BulletinAvalancheAPI:
         url = f"{self.BASE_URL}/liste-massifs"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_bulletin_bra(self, id_massif: int, format: str = "xml") -> Union[Dict[str, Any], bytes, str]:
         """
@@ -37,8 +37,8 @@ class BulletinAvalancheAPI:
         response.raise_for_status()
         
         if format.lower() == "pdf":
-            return response.content
-        return response.text
+            return response
+        return response
 
     def get_image_montagne_risques(self, id_massif: str) -> bytes:
         """Télécharger l'image de l'indice de risque du massif."""
@@ -46,7 +46,7 @@ class BulletinAvalancheAPI:
         params = {"id-massif": id_massif}
         response = APISession.get(url, headers={"Accept": "image/*"}, params=params)
         response.raise_for_status()
-        return response.content
+        return response
 
     def get_image_rose_pentes(self, id_massif: int) -> bytes:
         """Télécharger l'image de la rose des pentes du massif."""
@@ -54,7 +54,7 @@ class BulletinAvalancheAPI:
         params = {"id-massif": id_massif}
         response = APISession.get(url, headers={"Accept": "image/*"}, params=params)
         response.raise_for_status()
-        return response.content
+        return response
 
     def get_image_montagne_enneigement(self, id_massif: str) -> bytes:
         """Télécharger l'image de l'enneigement du massif."""
@@ -62,7 +62,7 @@ class BulletinAvalancheAPI:
         params = {"id-massif": id_massif}
         response = APISession.get(url, headers={"Accept": "image/*"}, params=params)
         response.raise_for_status()
-        return response.content
+        return response
 
     def get_image_graphe_neige_fraiche(self, id_massif: str) -> bytes:
         """Télécharger l'image du graphe de neige fraiche du massif."""
@@ -70,7 +70,7 @@ class BulletinAvalancheAPI:
         params = {"id-massif": id_massif}
         response = APISession.get(url, headers={"Accept": "image/*"}, params=params)
         response.raise_for_status()
-        return response.content
+        return response
 
     def get_image_apercu_meteo(self, id_massif: str) -> bytes:
         """Télécharger l'image de l'aperçu météo du massif."""
@@ -78,7 +78,7 @@ class BulletinAvalancheAPI:
         params = {"id-massif": id_massif}
         response = APISession.get(url, headers={"Accept": "image/*"}, params=params)
         response.raise_for_status()
-        return response.content
+        return response
 
     def get_image_sept_derniers_jours(self, id_massif: str) -> bytes:
         """Télécharger l'image des conditions météo des 7 derniers jours du massif."""
@@ -86,4 +86,4 @@ class BulletinAvalancheAPI:
         params = {"id-massif": id_massif}
         response = APISession.get(url, headers={"Accept": "image/*"}, params=params)
         response.raise_for_status()
-        return response.content
+        return response

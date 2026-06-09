@@ -18,4 +18,4 @@ class PaquetAromeOMAPI:
         if url.endswith("//"): url = url[:-1]
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response

@@ -18,28 +18,28 @@ class PaquetAromeAPI:
         url = f"{self.BASE_URL}/models/AROME"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_grids(self) -> Dict[str, Any]:
         """Obtenir la liste des grilles disponibles."""
         url = f"{self.BASE_URL}/models/AROME/grids"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_grid_details(self, grid: float) -> Dict[str, Any]:
         """Obtenir les détails d'une grille spécifique."""
         url = f"{self.BASE_URL}/models/AROME/grids/{grid}"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_packages(self, grid: float) -> Dict[str, Any]:
         """Obtenir les paquets disponibles pour une grille donnée."""
         url = f"{self.BASE_URL}/models/AROME/grids/{grid}/packages"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_package_details(self, grid: float, package: str, referencetime: str) -> Dict[str, Any]:
         """Obtenir les détails d'un paquet."""
@@ -47,7 +47,7 @@ class PaquetAromeAPI:
         params = {"referencetime": referencetime}
         response = APISession.get(url, headers=self.headers, params=params)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_product(self, grid: float, package: str, referencetime: str, time: str, format: str = "GRIB2") -> bytes:
         """
@@ -70,4 +70,4 @@ class PaquetAromeAPI:
         headers = {"Accept": "application/octet-stream"}
         response = APISession.get(url, headers=headers, params=params)
         response.raise_for_status()
-        return response.content
+        return response

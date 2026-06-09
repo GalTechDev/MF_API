@@ -25,7 +25,7 @@ class ArpegeAPI:
         headers = {"Accept": "application/xml"}
         response = APISession.get(url, headers=headers, params=params)
         response.raise_for_status()
-        return response.content
+        return response
 
     def get_map(self, endpoint: str, layers: str, crs: str, bbox: str, width: int, height: int, format: str = "image/png", time: Optional[str] = None) -> bytes:
         """
@@ -56,7 +56,7 @@ class ArpegeAPI:
         headers = {"Accept": format}
         response = APISession.get(url, headers=headers, params=params)
         response.raise_for_status()
-        return response.content
+        return response
 
     def get_coverage(self, endpoint: str, coverageid: str, subset: Optional[str] = None, format: str = "image/tiff") -> bytes:
         """
@@ -75,4 +75,4 @@ class ArpegeAPI:
         headers = {"Accept": format}
         response = APISession.get(url, headers=headers, params=params)
         response.raise_for_status()
-        return response.content
+        return response

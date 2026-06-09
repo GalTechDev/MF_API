@@ -1,5 +1,5 @@
 import requests
-
+from .utils import APIResponse
 
 class APISession:
     api_key = ""
@@ -35,4 +35,4 @@ class APISession:
             headers.update(APISession.gen_headers())
             response = requests.get(url, headers=headers, params=params, **kwargs)
 
-        return response
+        return APIResponse(response)

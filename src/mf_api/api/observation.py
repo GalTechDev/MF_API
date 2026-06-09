@@ -17,4 +17,4 @@ class ObservationAPI:
         url = f"{self.BASE_URL}/{endpoint}" if endpoint else self.BASE_URL
         response = APISession.get(url, headers=self.headers, params=params)
         response.raise_for_status()
-        return response.json()
+        return response

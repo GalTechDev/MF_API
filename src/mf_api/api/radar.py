@@ -24,28 +24,28 @@ class RadarAPI:
         url = f"{self.BASE_URL}/mosaiques"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_zone_mosaiques(self, zone: str) -> Dict[str, Any]:
         """Obtenir la description de la zone."""
         url = f"{self.BASE_URL}/mosaiques/{zone}"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_produits_mosaiques(self, zone: str) -> Dict[str, Any]:
         """Télécharger la liste des observations disponibles pour la zone spécifiée."""
         url = f"{self.BASE_URL}/mosaiques/{zone}/observations"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def descr_produits_mosaiques(self, zone: str, observation: str) -> Dict[str, Any]:
         """Obtenir la description de l'observation mosaïque disponible."""
         url = f"{self.BASE_URL}/mosaiques/{zone}/observations/{observation}"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_mosaique_produit(self, zone: str, observation: str, maille: int, format_attendu: str = "gzip") -> bytes:
         """
@@ -94,35 +94,35 @@ class RadarAPI:
         
         response = APISession.get(url, headers=headers)
         response.raise_for_status()
-        return response.text
+        return response
 
     def get_stations(self) -> Dict[str, Any]:
         """Télécharger la liste des stations disponibles."""
         url = f"{self.BASE_URL}/stations"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_station_info(self, id_station: int) -> Dict[str, Any]:
         """Obtenir la description de la station."""
         url = f"{self.BASE_URL}/stations/{id_station}"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_station_obs(self, id_station: int) -> Dict[str, Any]:
         """Télécharger la liste des observations disponibles pour la station spécifiée."""
         url = f"{self.BASE_URL}/stations/{id_station}/observations"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_station_obs_descr(self, id_station: int, observation: str) -> Dict[str, Any]:
         """Obtenir la description de l'observation pour la station spécifiée."""
         url = f"{self.BASE_URL}/stations/{id_station}/observations/{observation}"
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_polaires(self, id_station: int, observation: str, tour_antenne: Optional[str] = None) -> bytes:
         """

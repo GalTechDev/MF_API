@@ -26,6 +26,9 @@ from .api.paquet_observation import PaquetObservationAPI
 from .decoders.eccodes_decoder import MFBufrDecoder
 from .decoders.mosaique_decoder import MosaiqueDecoder, MosaiqueRadar
 
+#Utils
+from .utils import MClass, MObject, csv_to_MClass, response_to_MClass
+
 #Prevision
 
 __all__ = [
@@ -53,5 +56,10 @@ __all__ = [
 
     "MFBufrDecoder",
     "MosaiqueDecoder",
-    "MosaiqueRadar"
+    "MosaiqueRadar",
+
+    "MClass",
+    "MObject",
+    "csv_to_MClass",
+    "response_to_MClass"
 ]

@@ -4,11 +4,22 @@ def csv_to_MClass(csv: str|list, sep=";"):
     if isinstance(csv, str):
         csv = csv.split("\n")
     keys =  csv[0].split(sep)
-    return [MClass({keys[i]:line.split(sep)[i] for i in range(len(keys))}) for line in csv[1:] if line]
+    return [MClass({keys[i].strip("\r"):line.split(sep)[i].strip("\r") for i in range(len(keys))}) for line in csv[1:] if line]
 
 def response_to_MClass(response: Response):
-    #response.headers.
-    return 
+    content_type = response.headers.get("Content-Type")
+    if "text/csv" in content_type:
+        return csv_to_MClass(response.text)
+    elif "application/json" in content_type:
+        return MObject(response.json())
+     
+class APIResponse(Response):
+    def __init__(self, response: Response):
+        super().__init__()
+        self.__dict__.update(response.__dict__)
+
+    def to_MClass(self):
+        return response_to_MClass(self)
 
 class MClass(dict):
     """
@@ -25,8 +36,11 @@ class MClass(dict):
         super().__setitem__(k, MObject(v))
 
     def __getattr__(self, k):
-        return super().__getattr__(k)
-        
+        if k in super():
+            return super().__getitem__(k)
+        else:
+            return super().__getattr__(k)
+
     def __setitem__(self, k, v):
         super().__setitem__(k, MObject(v))
 

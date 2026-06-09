@@ -39,7 +39,7 @@ class PaquetRadarAPI:
         
         response = APISession.get(url, headers=headers)
         response.raise_for_status()
-        return response.text
+        return response
 
     def get_stations(self) -> Dict[str, Any]:
         """
@@ -49,7 +49,7 @@ class PaquetRadarAPI:
         
         response = APISession.get(url, headers=self.headers)
         response.raise_for_status()
-        return response.json()
+        return response
 
     def get_station_paquet(self, id_station: int) -> bytes:
         """
